@@ -84,25 +84,15 @@
 
 <div align="center">
 
-![Toronto](https://img.shields.io/badge/Toronto-ON-C8102E?style=flat-square)
+![Vancouver to Toronto](https://img.shields.io/badge/Vancouver,_BC_%E2%86%92_Toronto,_ON-C8102E?style=flat-square)
 
-**Cameras**
+![Bodies](https://img.shields.io/badge/Sony-A7S_III_·_A1_II_·_A7R_V-FF6600?style=flat-square)
+![Zooms](https://img.shields.io/badge/GM-24--70_·_70--200_·_50--150-1a1a1a?style=flat-square)
+![Primes](https://img.shields.io/badge/GM-50mm_f%2F1.2-1a1a1a?style=flat-square)
+![Long](https://img.shields.io/badge/G-200--600mm-1a1a1a?style=flat-square)
+![Accessories](https://img.shields.io/badge/+_a_lot_of_other_accessories-6e6e6e?style=flat-square)
 
-![A7S III](https://img.shields.io/badge/Sony-A7S_III-FF6600?style=flat-square)
-![A9 II](https://img.shields.io/badge/Sony-A9_II-FF6600?style=flat-square)
-![A7R V](https://img.shields.io/badge/Sony-A7R_V-FF6600?style=flat-square)
-
-**Glass**
-
-![24-70](https://img.shields.io/badge/24--70mm-f%2F2.8_GM_II-1a1a1a?style=flat-square)
-![70-200](https://img.shields.io/badge/70--200mm-f%2F2.8_GM-1a1a1a?style=flat-square)
-![50](https://img.shields.io/badge/50mm-f%2F1.2_GM-1a1a1a?style=flat-square)
-![50-150](https://img.shields.io/badge/50--150mm-f%2F2_GM-1a1a1a?style=flat-square)
-![200-600](https://img.shields.io/badge/200--600mm-G-1a1a1a?style=flat-square)
-
-**Garage and shop**
-
-![BMW](https://img.shields.io/badge/2×_BMW-E93_N54-0166B1?style=flat-square)
-![Bambu Lab](https://img.shields.io/badge/Bambu_Lab-H2D-00AE42?style=flat-square)
+![BMW](https://img.shields.io/badge/BMW-2×_E93_N54_·_G12_N63-0166B1?style=flat-square)
+![Printers](https://img.shields.io/badge/Printers-Bambu_Lab_H2D_·_Ender_3_Pro-00AE42?style=flat-square)
 
 </div>
