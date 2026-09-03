@@ -1,9 +1,9 @@
-<h1 align="center">Hi, I'm Ben 👋</h1>
+<h1 align="center">Hi, I'm Ben</h1>
 
-<h3 align="center">CS @ University of Toronto · I build things fast, ship them, and keep the ones that work</h3>
+<h3 align="center">CS @ University of Toronto. I build things fast, ship them, and keep the ones that work.</h3>
 
 <p align="center">
-  17 projects between February and August 2026 — mostly hackathons, a few that outgrew the weekend.<br>
+  17 projects between February and August 2026, mostly hackathons, a few that outgrew the weekend.<br>
   <b>Five are running in production right now.</b>
 </p>
 
@@ -13,19 +13,17 @@
 [![Gmail](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:benz16107@gmail.com)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_ben_zhou_/)
 
-![Open to Summer 2027 internships](https://img.shields.io/badge/Open_to-Summer_2027_internships-2ea44f?style=for-the-badge)
-
 </div>
 
 ---
 
-<h3 align="center">🚀 Live — you can open all of these</h3>
+<h3 align="center">Live, you can open all of these</h3>
 
 <div align="center">
 
 [![DataFrame](https://img.shields.io/badge/DataFrame-dataframe.space-0080FF?style=for-the-badge&logo=digitalocean&logoColor=white)](https://dataframe.space)
 [![tradex](https://img.shields.io/badge/tradex-live_demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://tradex-six-dun.vercel.app)
-[![Cracked City](https://img.shields.io/badge/Cracked_City-🤗_Space-FFD21E?style=for-the-badge)](https://huggingface.co/spaces/crackedcity/app)
+[![Cracked City](https://img.shields.io/badge/Cracked_City-Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/spaces/crackedcity/app)
 [![RouteWatch](https://img.shields.io/badge/RouteWatch-live_demo-0080FF?style=for-the-badge&logo=googlemaps&logoColor=white)](https://routewatch-jn559.ondigitalocean.app)
 [![Tappet](https://img.shields.io/badge/Tappet-macOS_app-999999?style=for-the-badge&logo=apple&logoColor=white)](https://benz16107.github.io/keypace-site/)
 
@@ -35,24 +33,24 @@
 
 | Project | What it is | Built with |
 |---|---|---|
-| 🧮 **[DataFrame](https://dataframe.space)** | A node-based canvas where every node runs **real Python in your browser** — CPython via Pyodide, so there's no execution server and your code never leaves the tab. Built at DRHX. | `tldraw` `Pyodide` `FastAPI` |
-| 🪙 **[tradex](https://tradex-six-dun.vercel.app)** | A marketplace for the agent economy. Agents pay each other per call in USDC on Solana over x402 — no accounts, no API keys, reputation earned on-chain. | `Next.js` `Solana` `x402` |
-| 🛣️ **[Cracked City](https://huggingface.co/spaces/crackedcity/app)** | Road-damage triage for Toronto: what to fix first, and what it costs. I built the NVFP4-quantized Qwen3.6-27B checkpoint and the [311 filing pipeline](https://github.com/benz16107/311-request). | `NVFP4` `Qwen` `Playwright` |
-| 📈 **[RouteWatch](https://routewatch-jn559.ondigitalocean.app)** | Tracks how long a drive *actually* takes over weeks, not in the moment. Public demo — no login. | `Node` `Google Maps` |
-| ⌨️ **[Tappet](https://benz16107.github.io/keypace-site/)** | A native macOS typing test, taken end to end from empty project to App Store submission. | `Swift` `SwiftUI` |
+| **[DataFrame](https://dataframe.space)** | A node based canvas where every node runs **real Python in your browser**. CPython via Pyodide, so there is no execution server and your code never leaves the tab. Built at DRHX. | `tldraw` `Pyodide` `FastAPI` |
+| **[tradex](https://tradex-six-dun.vercel.app)** | A marketplace for the agent economy. Agents pay each other per call in USDC on Solana over x402. No accounts, no API keys, reputation earned on chain. | `Next.js` `Solana` `x402` |
+| **[Cracked City](https://huggingface.co/spaces/crackedcity/app)** | Road damage triage for Toronto: what to fix first, and what it costs. I built the NVFP4 quantized Qwen3.6 27B checkpoint and the [311 filing pipeline](https://github.com/benz16107/311-request). | `NVFP4` `Qwen` `Playwright` |
+| **[RouteWatch](https://routewatch-jn559.ondigitalocean.app)** | Tracks how long a drive *actually* takes over weeks, not in the moment. Public demo, no login. | `Node` `Google Maps` |
+| **[Tappet](https://benz16107.github.io/keypace-site/)** | A native macOS typing test, taken end to end from empty project to App Store submission. | `Swift` `SwiftUI` |
 
 ---
 
-<h3 align="center">🛠 Also worth a look</h3>
+<h3 align="center">Also worth a look</h3>
 
 <div align="center">
 
 | | |
 |---|---|
-| 🦯 **[BlindSpot](https://github.com/benz16107/BlindSpot)** | Walking navigation for blind and low-vision users — voice agent, live camera, obstacle detection with haptics · **[demo film ▶](https://youtu.be/gp-m_eguosk)** |
-| 🏨 **[Nova](https://github.com/benz16107/Nova)** | In-room hotel voice concierge on the OpenAI Realtime API, with NFC activation and isolated per-guest memory |
-| 🗿 **[Artifex](https://github.com/benz16107/Artifex)** | A product idea becomes a spec, then brand research, then concept images, then actual 3D meshes |
-| 🛡 **[Pentagon](https://github.com/benz16107/htf)** | Multi-tenant supply-chain risk platform built around explainable agent traces |
+| **[BlindSpot](https://github.com/benz16107/BlindSpot)** | Walking navigation for blind and low vision users. Voice agent, live camera, obstacle detection with haptics. **[Demo film](https://youtu.be/gp-m_eguosk)** |
+| **[Nova](https://github.com/benz16107/Nova)** | In room hotel voice concierge on the OpenAI Realtime API, with NFC activation and isolated per guest memory |
+| **[Artifex](https://github.com/benz16107/Artifex)** | A product idea becomes a spec, then brand research, then concept images, then actual 3D meshes |
+| **[Pentagon](https://github.com/benz16107/htf)** | Multi tenant supply chain risk platform built around explainable agent traces |
 
 </div>
 
@@ -82,19 +80,29 @@
 
 ---
 
-<h3 align="center">📷 Away from the keyboard</h3>
-
-<p align="center">
-  I shoot photos, mostly on road trips — the trips are why the cards fill up.<br>
-  I own two BMW E93s and roughly one of them runs at any given time, which is the honest ratio.<br>
-  There's a 3D printer that's never idle, usually making a bracket the car turned out to need.
-</p>
+<h3 align="center">Away from the keyboard</h3>
 
 <div align="center">
 
-![Toronto](https://img.shields.io/badge/Toronto-ON-red?style=flat-square)
-![Photography](https://img.shields.io/badge/Photography-35mm-black?style=flat-square)
-![Cars](https://img.shields.io/badge/2×-BMW_E93_M54-0166B1?style=flat-square)
-![3D Printing](https://img.shields.io/badge/3D_Printing-always_queued-orange?style=flat-square)
+![Toronto](https://img.shields.io/badge/Toronto-ON-C8102E?style=flat-square)
+
+**Cameras**
+
+![A7S III](https://img.shields.io/badge/Sony-A7S_III-FF6600?style=flat-square)
+![A9 II](https://img.shields.io/badge/Sony-A9_II-FF6600?style=flat-square)
+![A7R V](https://img.shields.io/badge/Sony-A7R_V-FF6600?style=flat-square)
+
+**Glass**
+
+![24-70](https://img.shields.io/badge/24--70mm-f%2F2.8_GM_II-1a1a1a?style=flat-square)
+![70-200](https://img.shields.io/badge/70--200mm-f%2F2.8_GM-1a1a1a?style=flat-square)
+![50](https://img.shields.io/badge/50mm-f%2F1.2_GM-1a1a1a?style=flat-square)
+![50-150](https://img.shields.io/badge/50--150mm-f%2F2_GM-1a1a1a?style=flat-square)
+![200-600](https://img.shields.io/badge/200--600mm-G-1a1a1a?style=flat-square)
+
+**Garage and shop**
+
+![BMW](https://img.shields.io/badge/2×_BMW-E93_N54-0166B1?style=flat-square)
+![Bambu Lab](https://img.shields.io/badge/Bambu_Lab-H2D-00AE42?style=flat-square)
 
 </div>
