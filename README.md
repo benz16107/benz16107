@@ -1,45 +1,50 @@
-<h1 align="center">Hi 👋, I'm Ben <img height="40" src="https://emoji.gg/assets/emoji/7333-parrotdance.gif"></h1>
-<h3 align="center">A passionate Full Stack developer from Toronto, ON, Canada</h3>
+# Ben Zhou
 
+CS at the University of Toronto. I build things quickly, ship them, and keep the ones that work.
 
-- 👯 I’m looking to collaborate on **front-end and back-end projects**
+Seventeen projects between February and August 2026 — mostly hackathons, a few that outgrew
+the weekend. Five are running in production right now and you can open all of them.
 
-- 📫 How to reach me: **benz16107@gmail.com**
+**Open to Summer 2027 internships.**
 
-<h3 align="center">Connect with me:</h3>
-<div align="center">
+---
 
-[![image](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/-ben-zhou-/)
-[![image](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_ben_zhou_/)
-[![image](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:benz16107@gmail.com)
-  
-</div>
+## Things you can actually open
 
-<h3 align="center">Languages and Tools:</h3>
+| | | |
+|---|---|---|
+| **[DataFrame](https://dataframe.space)** | A node-based canvas where every node runs real Python **in your browser** — CPython via Pyodide, so there's no execution server and your code never leaves the tab. Built at DRHX. | tldraw · Pyodide · FastAPI |
+| **[tradex](https://tradex-six-dun.vercel.app)** | A marketplace for the agent economy. Agents pay each other per call in USDC on Solana over x402 — no accounts, no API keys, reputation earned on-chain. | Next.js · Solana · x402 |
+| **[Cracked City](https://huggingface.co/spaces/crackedcity/app)** | Road-damage triage for the City of Toronto: what to fix first, and what it costs. I did the NVFP4-quantized Qwen3.6-27B checkpoint and the [311 filing pipeline](https://github.com/benz16107/311-request). | NVFP4 · Qwen · Playwright |
+| **[RouteWatch](https://routewatch-jn559.ondigitalocean.app)** | Tracks how long a drive actually takes over weeks, not in the moment. Open it — the demo is public, no login. | Node · Google Maps |
+| **[Tappet](https://benz16107.github.io/keypace-site/)** | A native macOS typing-speed test, taken end to end from empty project to App Store submission. | Swift · SwiftUI |
 
-<p align="center"> 
-  <a href="https://www.w3.org/html/" target="_blank"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> 
-  </a>
-  <a href="https://www.w3schools.com/css/" target="_blank"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> 
-  </a> 
-  <a href="https://www.python.org" target="_blank"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> 
-  </a>  
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> 
-  </a> 
-  <a href="https://www.linux.org/" target="_blank"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> 
-  </a> 
-  <a href="https://git-scm.com/" target="_blank"> 
-    <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> 
-  </a>
-</p>
+## Also worth a look
 
-------
+**[BlindSpot](https://github.com/benz16107/BlindSpot)** — walking navigation for blind and low-vision
+users: voice agent, live camera, obstacle detection with haptics. [Demo film](https://youtu.be/gp-m_eguosk)
 
-[Benz16107](https://github.com/Benz16107)
+**[Nova](https://github.com/benz16107/Nova)** — in-room hotel voice concierge on the OpenAI Realtime API,
+with NFC activation and isolated per-guest memory
 
-Last Edited on: Feb 7, 2026
+**[Artifex](https://github.com/benz16107/Artifex)** — a product idea becomes a spec, then brand research,
+then concept images, then actual 3D meshes
+
+**[Pentagon](https://github.com/benz16107/htf)** — multi-tenant supply-chain risk platform built around
+explainable agent traces
+
+## What I reach for
+
+Python · TypeScript · Swift · Dart · Java · Next.js · FastAPI · Flutter · Postgres · Docker
+
+Less a list of things I've heard of, more the things above were built with.
+
+## Away from the keyboard
+
+I shoot photos, mostly on road trips — the trips are why the cards fill up. I own two BMW E93s
+and roughly one of them runs at any given time, which is the honest ratio. There's a 3D printer
+that's never idle, usually making a bracket the car turned out to need.
+
+---
+
+[benz16107@gmail.com](mailto:benz16107@gmail.com) · [LinkedIn](https://www.linkedin.com/in/-ben-zhou-/) · Toronto, ON
