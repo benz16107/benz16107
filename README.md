@@ -3,8 +3,8 @@
 <h3 align="center">CS @ University of Toronto. I build things fast, ship them, and keep the ones that work.</h3>
 
 <p align="center">
-  17 projects between February and August 2026, mostly hackathons, a few that outgrew the weekend.<br>
-  <b>Five are running in production right now.</b>
+  21 projects between February and October 2026, mostly hackathons, a few that outgrew the weekend.<br>
+  11 hackathon wins. <b>Eight projects are running in production right now.</b>
 </p>
 
 <div align="center">
@@ -22,11 +22,14 @@
 
 <div align="center">
 
+[![Pixie](https://img.shields.io/badge/Pixie-live_demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://pixie-underwriting.vercel.app)
+[![UofTime](https://img.shields.io/badge/UofTime-uoftime.com-002A5C?style=for-the-badge&logo=googlecalendar&logoColor=white)](https://uoftime.com)
+[![Keypace](https://img.shields.io/badge/Keypace-Mac_App_Store-999999?style=for-the-badge&logo=apple&logoColor=white)](https://apps.apple.com/app/keypace/id6777376987?mt=12)
 [![DataFrame](https://img.shields.io/badge/DataFrame-dataframe.space-0080FF?style=for-the-badge&logo=digitalocean&logoColor=white)](https://dataframe.space)
 [![tradex](https://img.shields.io/badge/tradex-live_demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://tradex-six-dun.vercel.app)
 [![Cracked City](https://img.shields.io/badge/Cracked_City-Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/spaces/crackedcity/app)
 [![RouteWatch](https://img.shields.io/badge/RouteWatch-live_demo-0080FF?style=for-the-badge&logo=googlemaps&logoColor=white)](https://routewatch-jn559.ondigitalocean.app)
-[![Tappet](https://img.shields.io/badge/Tappet-macOS_app-999999?style=for-the-badge&logo=apple&logoColor=white)](https://benz16107.github.io/keypace-site/)
+[![RCVC](https://img.shields.io/badge/RCVC-rcventure.ca-053D1F?style=for-the-badge&logo=vercel&logoColor=white)](https://rcventure.ca)
 
 </div>
 
@@ -34,11 +37,14 @@
 
 | Project | What it is | Built with |
 |---|---|---|
+| **[Pixie](https://pixie-underwriting.vercel.app)** | An insurance risk engine built solo at Hack the North 2026, where it **won the Intact and Federato tracks**. Agents decide what to look up, code computes every score and price, and a sentence with a number the tools did not return is blocked. **[Demo video](https://youtu.be/O47V32zbv20)** | `Next.js` `FastAPI` `Expo` |
+| **[UofTime](https://uoftime.com)** | A timetable builder for all three UofT campuses. Pick sections on a week grid, see the walk between classes on a map, subscribe from any calendar app. No account, the timetable lives in the link. It is also an MCP server, so Claude or ChatGPT can build one in conversation. | `React` `TypeScript` `MCP` |
+| **[Keypace](https://apps.apple.com/app/keypace/id6777376987?mt=12)** | A native macOS typing test, live on the Mac App Store. Version 1.1 adds a menu bar quick test that opens from any app and a per key heatmap. | `Swift` `SwiftUI` |
 | **[DataFrame](https://dataframe.space)** | A node based canvas where every node runs **real Python in your browser**. CPython via Pyodide, so there is no execution server and your code never leaves the tab. Built at DRHX. | `tldraw` `Pyodide` `FastAPI` |
 | **[tradex](https://tradex-six-dun.vercel.app)** | A marketplace for the agent economy. Agents pay each other per call in USDC on Solana over x402. No accounts, no API keys, reputation earned on chain. | `Next.js` `Solana` `x402` |
 | **[Cracked City](https://huggingface.co/spaces/crackedcity/app)** | Road damage triage for Toronto: what to fix first, and what it costs. I built the NVFP4 quantized Qwen3.6 27B checkpoint and the [311 filing pipeline](https://github.com/benz16107/311-request). | `NVFP4` `Qwen` `Playwright` |
 | **[RouteWatch](https://routewatch-jn559.ondigitalocean.app)** | Tracks how long a drive *actually* takes over weeks, not in the moment. Public demo, no login. | `Node` `Google Maps` |
-| **[Tappet](https://benz16107.github.io/keypace-site/)** | A native macOS typing test, taken end to end from empty project to App Store submission. | `Swift` `SwiftUI` |
+| **[rcventure.ca](https://rcventure.ca)** | The website for Rotman Commerce Venture Capital, the UofT club where I am Marketing Manager. Intro video, research library, a 3D partner globe and a "would you back it?" swipe game. | `Next.js` `Tailwind` `Motion` |
 
 ---
 
