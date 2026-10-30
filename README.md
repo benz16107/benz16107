@@ -3,8 +3,8 @@
 <h3 align="center">CS @ University of Toronto. I build things fast, ship them, and keep the ones that work.</h3>
 
 <p align="center">
-  21 projects between February and October 2026, mostly hackathons, a few that outgrew the weekend.<br>
-  11 hackathon wins. <b>Eight projects are running in production right now.</b>
+  22 projects between February and October 2026, mostly hackathons, a few that outgrew the weekend.<br>
+  14 hackathon wins. <b>Nine projects are running in production right now.</b>
 </p>
 
 <div align="center">
@@ -22,6 +22,7 @@
 
 <div align="center">
 
+[![GurtOS](https://img.shields.io/badge/GurtOS-gurtos.com-1F2937?style=for-the-badge&logo=linux&logoColor=white)](https://gurtos.com)
 [![Pixie](https://img.shields.io/badge/Pixie-live_demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://pixie-underwriting.vercel.app)
 [![UofTime](https://img.shields.io/badge/UofTime-uoftime.com-002A5C?style=for-the-badge&logo=googlecalendar&logoColor=white)](https://uoftime.com)
 [![Keypace](https://img.shields.io/badge/Keypace-Mac_App_Store-999999?style=for-the-badge&logo=apple&logoColor=white)](https://apps.apple.com/app/keypace/id6777376987?mt=12)
@@ -37,6 +38,7 @@
 
 | Project | What it is | Built with |
 |---|---|---|
+| **[GurtOS](https://gurtos.com)** | An operating system for AI agents, built solo at Cal Hacks 13.0, where it **won an Atlassian prize, a Fetch.ai special recognition prize and MLH's Best Use of Solana**. Each agent task runs as its own Linux user in its own copy of the files, keys stay in a vault the agent never sees, and spending over budget waits for your OK. Open source, installs from its own ISO. **[Demo video](https://youtu.be/rREjU2ddIyo)** · **[Code](https://github.com/benz16107/gurtos)** | `TypeScript` `Linux` `Swift` |
 | **[Pixie](https://pixie-underwriting.vercel.app)** | An insurance risk engine built solo at Hack the North 2026, where it **won the Intact and Federato tracks**. Agents decide what to look up, code computes every score and price, and a sentence with a number the tools did not return is blocked. **[Demo video](https://youtu.be/O47V32zbv20)** | `Next.js` `FastAPI` `Expo` |
 | **[UofTime](https://uoftime.com)** | A timetable builder for all three UofT campuses. Pick sections on a week grid, see the walk between classes on a map, subscribe from any calendar app. No account, the timetable lives in the link. It is also an MCP server, so Claude or ChatGPT can build one in conversation. | `React` `TypeScript` `MCP` |
 | **[Keypace](https://apps.apple.com/app/keypace/id6777376987?mt=12)** | A native macOS typing test, live on the Mac App Store. Version 1.1 adds a menu bar quick test that opens from any app and a per key heatmap. | `Swift` `SwiftUI` |
