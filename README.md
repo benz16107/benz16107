@@ -1,11 +1,7 @@
-<h1 align="center">Hi, I'm Ben</h1>
-
-<h3 align="center">CS @ University of Toronto. I build things fast, ship them, and keep the ones that work.</h3>
-
-<p align="center">
-  22 projects between February and October 2026, mostly hackathons, a few that outgrew the weekend.<br>
-  14 hackathon wins. <b>Nine projects are running in production right now.</b>
-</p>
+<!-- hero.svg comes from scripts/hero.py (run by hand). stats.svg is redrawn daily by
+     .github/workflows/stats.yml from public commits only. -->
+<a href="https://thebenzhou.com"><img src="./hero.svg" width="100%" alt="Ben Zhou. CS at the University of Toronto. I build things fast, ship them, and keep the ones that work. 22 projects in 2026, 14 hackathon wins, 9 live right now." /></a>
+<img src="./stats.svg" width="100%" alt="Commits to public repositories over the last 12 months, by month, redrawn daily" />
 
 <div align="center">
 
