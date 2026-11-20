@@ -1,8 +1,7 @@
-<!-- hero*.svg and map*.svg come from scripts/hero.py and scripts/map.py (run by hand). stats*.svg and live*.svg are
-     redrawn daily by .github/workflows/stats.yml, from public commits and a request to each live site. <picture>
-     follows the viewer's GitHub theme. -->
+<!-- hero*.svg comes from scripts/hero.py (run by hand). stats*.svg and live*.svg are redrawn daily by
+     .github/workflows/stats.yml, from public commits and a request to each live site. <picture> follows the
+     viewer's GitHub theme. -->
 <a href="https://thebenzhou.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./hero-dark.svg" /><img src="./hero.svg" width="100%" alt="Ben Zhou. CS at the University of Toronto. I build things fast, ship them, and keep the ones that work. 24 projects in 2026, 15 hackathon wins, 9 live right now." /></picture></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset="./map-dark.svg" /><img src="./map.svg" width="100%" alt="Map of the hackathons I competed at in 2026: Cal Hacks 13.0 in San Francisco, HackUTD in Dallas, HackPrinceton, McGill AeroHacks in Montreal, cuHacking7 in Ottawa, and Mac-a-thon, DeerHacks V, Hack Days in the 6ix, GenAI Genesis, SOON, Sandcastle and Hack the North around Toronto" /></picture>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./stats-dark.svg" /><img src="./stats.svg" width="100%" alt="Commits to public repositories over the last 12 months, by month, redrawn daily" /></picture>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./live-dark.svg" /><img src="./live.svg" width="100%" alt="Which of my nine live projects answered a request today, checked daily" /></picture>
 
