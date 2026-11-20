@@ -8,29 +8,29 @@
 <text x="40" y="150" font-size="16" fill="#45423C">answered today</text>
 <circle cx="285.0" cy="91" r="5" fill="#1A1916" stroke="#1A1916" stroke-width="1.5"/>
 <text x="300.0" y="96" font-size="15" fill="#1A1916">GurtOS</text>
-<text x="465.33333333333337" y="96" font-size="13" text-anchor="end" fill="#66625A">0.1s</text>
+<text x="465.33333333333337" y="96" font-size="13" text-anchor="end" fill="#66625A">0.2s</text>
 <circle cx="498.33333333333337" cy="91" r="5" fill="#1A1916" stroke="#1A1916" stroke-width="1.5"/>
 <text x="513.3333333333334" y="96" font-size="15" fill="#1A1916">Pixie</text>
-<text x="678.6666666666667" y="96" font-size="13" text-anchor="end" fill="#66625A">0.3s</text>
+<text x="678.6666666666667" y="96" font-size="13" text-anchor="end" fill="#66625A">0.4s</text>
 <circle cx="711.6666666666667" cy="91" r="5" fill="#1A1916" stroke="#1A1916" stroke-width="1.5"/>
 <text x="726.6666666666667" y="96" font-size="15" fill="#1A1916">UofTime</text>
-<text x="892.0000000000001" y="96" font-size="13" text-anchor="end" fill="#66625A">0.1s</text>
+<text x="892.0000000000001" y="96" font-size="13" text-anchor="end" fill="#66625A">0.3s</text>
 <circle cx="285.0" cy="127" r="5" fill="#1A1916" stroke="#1A1916" stroke-width="1.5"/>
 <text x="300.0" y="132" font-size="15" fill="#1A1916">Keypace</text>
-<text x="465.33333333333337" y="132" font-size="13" text-anchor="end" fill="#66625A">0.1s</text>
+<text x="465.33333333333337" y="132" font-size="13" text-anchor="end" fill="#66625A">0.5s</text>
 <circle cx="498.33333333333337" cy="127" r="5" fill="#1A1916" stroke="#1A1916" stroke-width="1.5"/>
 <text x="513.3333333333334" y="132" font-size="15" fill="#1A1916">DataFrame</text>
 <text x="678.6666666666667" y="132" font-size="13" text-anchor="end" fill="#66625A">0.1s</text>
 <circle cx="711.6666666666667" cy="127" r="5" fill="#1A1916" stroke="#1A1916" stroke-width="1.5"/>
 <text x="726.6666666666667" y="132" font-size="15" fill="#1A1916">tradex</text>
-<text x="892.0000000000001" y="132" font-size="13" text-anchor="end" fill="#66625A">0.1s</text>
+<text x="892.0000000000001" y="132" font-size="13" text-anchor="end" fill="#66625A">0.3s</text>
 <circle cx="285.0" cy="163" r="5" fill="#1A1916" stroke="#1A1916" stroke-width="1.5"/>
 <text x="300.0" y="168" font-size="15" fill="#1A1916">Cracked City</text>
 <text x="465.33333333333337" y="168" font-size="13" text-anchor="end" fill="#66625A">0.1s</text>
 <circle cx="498.33333333333337" cy="163" r="5" fill="#1A1916" stroke="#1A1916" stroke-width="1.5"/>
 <text x="513.3333333333334" y="168" font-size="15" fill="#1A1916">RouteWatch</text>
-<text x="678.6666666666667" y="168" font-size="13" text-anchor="end" fill="#66625A">0.1s</text>
+<text x="678.6666666666667" y="168" font-size="13" text-anchor="end" fill="#66625A">0.2s</text>
 <circle cx="711.6666666666667" cy="163" r="5" fill="#1A1916" stroke="#1A1916" stroke-width="1.5"/>
 <text x="726.6666666666667" y="168" font-size="15" fill="#1A1916">rcventure.ca</text>
-<text x="892.0000000000001" y="168" font-size="13" text-anchor="end" fill="#66625A">0.1s</text>
+<text x="892.0000000000001" y="168" font-size="13" text-anchor="end" fill="#66625A">0.3s</text>
 </svg>
