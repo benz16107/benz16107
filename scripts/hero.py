@@ -27,7 +27,8 @@ LIGHT = dict(bg="#F2F0EA", ink="#1A1916", ink2="#45423C", ink3="#66625A", line="
 DARK = dict(bg="#1A1916", ink="#F2F0EA", ink2="#CFCABF", ink3="#A29D92", line="#3A3833")
 
 W, H = 960, 420
-CROP = (330, 130, 1170, 970)  # head and shoulders in the 1500x2000 Cal Hacks headshot
+CROP = (70, 95, 830, 855)  # head and shoulders in the 900x1200 RCVC team portrait
+GAMMA = 1.3  # above 1 darkens midtones, so sunlit skin keeps its shading instead of going blank
 COLS = 100
 PX, PY, PW = 20, 20, 380  # portrait box
 RAMP = " .:-=+*#%@"  # sparse to dense
@@ -35,7 +36,7 @@ RAMP = " .:-=+*#%@"  # sparse to dense
 LABEL = "CS · UNIVERSITY OF TORONTO"
 NAME = "Ben Zhou"
 TAGLINE = ["I build things fast, ship them,", "and keep the ones that work."]
-FACTS = [("22", "projects in 2026"), ("14", "hackathon wins"), ("9", "live right now")]
+FACTS = [("24", "projects in 2026"), ("15", "hackathon wins"), ("9", "live right now")]
 SITE = "thebenzhou.com"
 
 
@@ -62,7 +63,7 @@ def tone_grid(photo, cols, cell_ratio):
     g = np.asarray(ImageOps.grayscale(cut.convert("RGB")), dtype=np.float32)
     # stretch tones over the subject only, so skin lands light and hair stays dark
     lo, hi = np.percentile(g[a], [3, 97])
-    g = np.clip((g - lo) / (hi - lo), 0, 1) ** 0.8
+    g = np.clip((g - lo) / (hi - lo), 0, 1) ** GAMMA
     g[~a] = 1.0
     rows = round(cols * g.shape[0] / g.shape[1] / cell_ratio)
     bh, bw = g.shape[0] / rows, g.shape[1] / cols

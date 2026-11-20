@@ -1,6 +1,6 @@
 <!-- hero*.svg come from scripts/hero.py (run by hand). stats*.svg are redrawn daily by
      .github/workflows/stats.yml from public commits only. <picture> follows the viewer's GitHub theme. -->
-<a href="https://thebenzhou.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./hero-dark.svg" /><img src="./hero.svg" width="100%" alt="Ben Zhou. CS at the University of Toronto. I build things fast, ship them, and keep the ones that work. 22 projects in 2026, 14 hackathon wins, 9 live right now." /></picture></a>
+<a href="https://thebenzhou.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./hero-dark.svg" /><img src="./hero.svg" width="100%" alt="Ben Zhou. CS at the University of Toronto. I build things fast, ship them, and keep the ones that work. 24 projects in 2026, 15 hackathon wins, 9 live right now." /></picture></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./stats-dark.svg" /><img src="./stats.svg" width="100%" alt="Commits to public repositories over the last 12 months, by month, redrawn daily" /></picture>
 
 <div align="center">
