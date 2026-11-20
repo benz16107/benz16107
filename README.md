@@ -9,6 +9,7 @@
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-thebenzhou.com-000000?style=for-the-badge&logo=googlechrome&logoColor=white)](https://thebenzhou.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/-ben-zhou-/)
+[![X](https://img.shields.io/badge/X-@benzhoudev-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/benzhoudev)
 [![Gmail](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:benz16107@gmail.com)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_ben_zhou_/)
 
