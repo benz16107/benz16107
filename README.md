@@ -1,4 +1,4 @@
-<!-- hero*.svg comes from scripts/hero.py, run by hand. stats*.svg and
+<!-- hero*.svg and photos*.svg come from scripts/hero.py and scripts/photos.py, run by hand. stats*.svg and
      live/ are redrawn daily by .github/workflows/stats.yml, from public commits and a request to each live
      site; each tile in live/ links to its site, so keep the tiles in step with SITES in scripts/stats.py.
      <picture> follows the viewer's GitHub theme. -->
@@ -77,6 +77,8 @@
 <h3 align="center">Away from the keyboard</h3>
 
 <div align="center">
+
+<a href="https://thebenzhou.com/#view=photos"><picture><source media="(prefers-color-scheme: dark)" srcset="./photos-dark.svg" /><img src="./photos.svg" width="100%" alt="My photos from Kyoto, Lake Yamanaka, Suwa, Hong Kong, Taiwan and Vancouver, scrolling" /></picture></a>
 
 ![Vancouver to Toronto](https://img.shields.io/badge/Vancouver,_BC_%E2%86%92_Toronto,_ON-C8102E?style=flat-square)
 
