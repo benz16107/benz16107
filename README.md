@@ -1,9 +1,11 @@
-<!-- hero*.svg comes from scripts/hero.py (run by hand). stats*.svg and live*.svg are redrawn daily by
-     .github/workflows/stats.yml, from public commits and a request to each live site. <picture> follows the
-     viewer's GitHub theme. -->
+<!-- hero*.svg comes from scripts/hero.py and wins*.svg from scripts/wins.py, both run by hand. stats*.svg and
+     live/ are redrawn daily by .github/workflows/stats.yml, from public commits and a request to each live
+     site; each tile in live/ links to its site, so keep the tiles in step with SITES in scripts/stats.py.
+     <picture> follows the viewer's GitHub theme. -->
 <a href="https://thebenzhou.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./hero-dark.svg" /><img src="./hero.svg" width="100%" alt="Ben Zhou. CS at the University of Toronto. I build things fast, ship them, and keep the ones that work. 24 projects in 2026, 15 hackathon wins, 9 live right now." /></picture></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./stats-dark.svg" /><img src="./stats.svg" width="100%" alt="Commits to public repositories over the last 12 months, by month, redrawn daily" /></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="./live-dark.svg" /><img src="./live.svg" width="100%" alt="Which of my nine live projects answered a request today, checked daily" /></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./live/head-dark.svg" /><img src="./live/head.svg" width="100%" alt="Which of my nine live projects answered a request today, checked daily" /></picture>
+<a href="https://gurtos.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./live/gurtos-dark.svg" /><img src="./live/gurtos.svg" width="33.33%" alt="GurtOS" /></picture></a><a href="https://pixie-underwriting.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="./live/pixie-dark.svg" /><img src="./live/pixie.svg" width="33.33%" alt="Pixie" /></picture></a><a href="https://uoftime.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./live/uoftime-dark.svg" /><img src="./live/uoftime.svg" width="33.33%" alt="UofTime" /></picture></a><a href="https://apps.apple.com/app/keypace/id6777376987?mt=12"><picture><source media="(prefers-color-scheme: dark)" srcset="./live/keypace-dark.svg" /><img src="./live/keypace.svg" width="33.33%" alt="Keypace" /></picture></a><a href="https://dataframe.space"><picture><source media="(prefers-color-scheme: dark)" srcset="./live/dataframe-dark.svg" /><img src="./live/dataframe.svg" width="33.33%" alt="DataFrame" /></picture></a><a href="https://tradex-six-dun.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="./live/tradex-dark.svg" /><img src="./live/tradex.svg" width="33.33%" alt="tradex" /></picture></a><a href="https://huggingface.co/spaces/crackedcity/app"><picture><source media="(prefers-color-scheme: dark)" srcset="./live/crackedcity-dark.svg" /><img src="./live/crackedcity.svg" width="33.33%" alt="Cracked City" /></picture></a><a href="https://routewatch-jn559.ondigitalocean.app"><picture><source media="(prefers-color-scheme: dark)" srcset="./live/routewatch-dark.svg" /><img src="./live/routewatch.svg" width="33.33%" alt="RouteWatch" /></picture></a><a href="https://rcventure.ca"><picture><source media="(prefers-color-scheme: dark)" srcset="./live/rcventureca-dark.svg" /><img src="./live/rcventureca.svg" width="33.33%" alt="rcventure.ca" /></picture></a>
 
 <div align="center">
 
@@ -17,21 +19,24 @@
 
 ---
 
-<h3 align="center">Live, you can open all of these</h3>
+<details>
+<summary><b>15 hackathon wins</b>, click for the 12 prizes with a public write-up</summary>
+<br>
 
-<div align="center">
+<picture><source media="(prefers-color-scheme: dark)" srcset="./wins-dark.svg" /><img src="./wins.svg" width="100%" alt="Hackathon prizes with a public write-up in 2026, stacked by month" /></picture>
 
-[![GurtOS](https://img.shields.io/badge/GurtOS-gurtos.com-1F2937?style=for-the-badge&logo=linux&logoColor=white)](https://gurtos.com)
-[![Pixie](https://img.shields.io/badge/Pixie-live_demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://pixie-underwriting.vercel.app)
-[![UofTime](https://img.shields.io/badge/UofTime-uoftime.com-002A5C?style=for-the-badge&logo=googlecalendar&logoColor=white)](https://uoftime.com)
-[![Keypace](https://img.shields.io/badge/Keypace-Mac_App_Store-999999?style=for-the-badge&logo=apple&logoColor=white)](https://apps.apple.com/app/keypace/id6777376987?mt=12)
-[![DataFrame](https://img.shields.io/badge/DataFrame-dataframe.space-0080FF?style=for-the-badge&logo=digitalocean&logoColor=white)](https://dataframe.space)
-[![tradex](https://img.shields.io/badge/tradex-live_demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://tradex-six-dun.vercel.app)
-[![Cracked City](https://img.shields.io/badge/Cracked_City-Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/spaces/crackedcity/app)
-[![RouteWatch](https://img.shields.io/badge/RouteWatch-live_demo-0080FF?style=for-the-badge&logo=googlemaps&logoColor=white)](https://routewatch-jn559.ondigitalocean.app)
-[![RCVC](https://img.shields.io/badge/RCVC-rcventure.ca-053D1F?style=for-the-badge&logo=vercel&logoColor=white)](https://rcventure.ca)
+| When | Hackathon | Project | Prize |
+|---|---|---|---|
+| Nov 2026 | HackUTD 2026 | [Tessera](https://devpost.com/software/bean-4970h3) | Spacetime track, 2nd place |
+| Oct 2026 | Cal Hacks 13.0 | [GurtOS](https://devpost.com/software/gurtos) | Atlassian prize<br>Fetch.ai special recognition prize<br>MLH Best Use of Solana |
+| Sep 2026 | Hack the North 2026 | [Pixie](https://devpost.com/software/pixie-8vlj7g) | Intact track<br>Federato track |
+| Jul 2026 | cuHacking7 | [tradex](https://devpost.com/software/tradex-0efat7) | MLH Best Use of Solana |
+| Mar 2026 | McGill AeroHacks | [OOPS](https://devpost.com/software/skygrid) | Best Use of MongoDB Atlas |
+| Mar 2026 | GenAI Genesis | [Eco-Pulse](https://devpost.com/software/eco-pulse-fpbo15) | Top 2 teams, online |
+| Mar 2026 | Hack Days in the 6ix | [Packwise](https://devpost.com/software/packwise-jmgtqi) | Runner up |
+| Feb 2026 | Mac-a-thon | [BlindSpot](https://devpost.com/software/blindspot-zs7dwq) | MLH Best Use of ElevenLabs<br>Best Use of Backboard.io (GitCloud) |
 
-</div>
+</details>
 
 <br>
 
