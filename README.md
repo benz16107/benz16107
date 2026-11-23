@@ -9,11 +9,11 @@
 
 <div align="center">
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-thebenzhou.com-000000?style=for-the-badge&logo=googlechrome&logoColor=white)](https://thebenzhou.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/-ben-zhou-/)
-[![X](https://img.shields.io/badge/X-@benzhoudev-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/benzhoudev)
-[![Gmail](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:benz16107@gmail.com)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_ben_zhou_/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-thebenzhou.com-1A1916?style=for-the-badge&logo=googlechrome&logoColor=white)](https://thebenzhou.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-1A1916?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/-ben-zhou-/)
+[![X](https://img.shields.io/badge/X-@benzhoudev-1A1916?style=for-the-badge&logo=x&logoColor=white)](https://x.com/benzhoudev)
+[![Gmail](https://img.shields.io/badge/Email-1A1916?style=for-the-badge&logo=gmail&logoColor=white)](mailto:benz16107@gmail.com)
+[![Instagram](https://img.shields.io/badge/Instagram-1A1916?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_ben_zhou_/)
 
 </div>
 
@@ -22,23 +22,31 @@
 <h3 align="center">Languages and Tools</h3>
 
 <p align="center">
-  <a href="https://www.python.org" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="42" height="42"/></a>&nbsp;&nbsp;
-  <a href="https://www.typescriptlang.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="42" height="42"/></a>&nbsp;&nbsp;
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="42" height="42"/></a>&nbsp;&nbsp;
-  <a href="https://developer.apple.com/swift/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg" alt="swift" width="42" height="42"/></a>&nbsp;&nbsp;
-  <a href="https://dart.dev" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-original.svg" alt="dart" width="42" height="42"/></a>&nbsp;&nbsp;
-  <a href="https://www.java.com" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="42" height="42"/></a>&nbsp;&nbsp;
-  <a href="https://www.postgresql.org" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" alt="postgresql" width="42" height="42"/></a>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/python/F2F0EA" /><img src="https://cdn.simpleicons.org/python/1A1916" alt="Python" title="Python" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/typescript/F2F0EA" /><img src="https://cdn.simpleicons.org/typescript/1A1916" alt="TypeScript" title="TypeScript" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/javascript/F2F0EA" /><img src="https://cdn.simpleicons.org/javascript/1A1916" alt="JavaScript" title="JavaScript" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/swift/F2F0EA" /><img src="https://cdn.simpleicons.org/swift/1A1916" alt="Swift" title="Swift" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/dart/F2F0EA" /><img src="https://cdn.simpleicons.org/dart/1A1916" alt="Dart" title="Dart" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/openjdk/F2F0EA" /><img src="https://cdn.simpleicons.org/openjdk/1A1916" alt="Java" title="Java" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/postgresql/F2F0EA" /><img src="https://cdn.simpleicons.org/postgresql/1A1916" alt="PostgreSQL" title="PostgreSQL" width="36" height="36" /></picture>
 </p>
 
 <p align="center">
-  <a href="https://nextjs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" alt="nextjs" width="42" height="42"/></a>&nbsp;&nbsp;
-  <a href="https://reactjs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="react" width="42" height="42"/></a>&nbsp;&nbsp;
-  <a href="https://nodejs.org" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="nodejs" width="42" height="42"/></a>&nbsp;&nbsp;
-  <a href="https://fastapi.tiangolo.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg" alt="fastapi" width="42" height="42"/></a>&nbsp;&nbsp;
-  <a href="https://flutter.dev" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg" alt="flutter" width="42" height="42"/></a>&nbsp;&nbsp;
-  <a href="https://tailwindcss.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg" alt="tailwind" width="42" height="42"/></a>&nbsp;&nbsp;
-  <a href="https://www.docker.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="docker" width="42" height="42"/></a>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/nextdotjs/F2F0EA" /><img src="https://cdn.simpleicons.org/nextdotjs/1A1916" alt="Next.js" title="Next.js" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/react/F2F0EA" /><img src="https://cdn.simpleicons.org/react/1A1916" alt="React" title="React" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/vite/F2F0EA" /><img src="https://cdn.simpleicons.org/vite/1A1916" alt="Vite" title="Vite" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/threedotjs/F2F0EA" /><img src="https://cdn.simpleicons.org/threedotjs/1A1916" alt="Three.js" title="Three.js" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/tailwindcss/F2F0EA" /><img src="https://cdn.simpleicons.org/tailwindcss/1A1916" alt="Tailwind" title="Tailwind" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/fastapi/F2F0EA" /><img src="https://cdn.simpleicons.org/fastapi/1A1916" alt="FastAPI" title="FastAPI" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/flutter/F2F0EA" /><img src="https://cdn.simpleicons.org/flutter/1A1916" alt="Flutter" title="Flutter" width="36" height="36" /></picture>
+</p>
+
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/nodedotjs/F2F0EA" /><img src="https://cdn.simpleicons.org/nodedotjs/1A1916" alt="Node.js" title="Node.js" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/docker/F2F0EA" /><img src="https://cdn.simpleicons.org/docker/1A1916" alt="Docker" title="Docker" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/linux/F2F0EA" /><img src="https://cdn.simpleicons.org/linux/1A1916" alt="Linux" title="Linux" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/vercel/F2F0EA" /><img src="https://cdn.simpleicons.org/vercel/1A1916" alt="Vercel" title="Vercel" width="36" height="36" /></picture>&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/modelcontextprotocol/F2F0EA" /><img src="https://cdn.simpleicons.org/modelcontextprotocol/1A1916" alt="MCP" title="MCP" width="36" height="36" /></picture>
 </p>
 
 ---
@@ -49,16 +57,16 @@
 
 <a href="https://thebenzhou.com/#view=photos"><picture><source media="(prefers-color-scheme: dark)" srcset="./photos-dark.svg" /><img src="./photos.svg" width="100%" alt="My photos from Kyoto, Lake Yamanaka, Suwa, Hong Kong, Taiwan and Vancouver, scrolling" /></picture></a>
 
-![Vancouver to Toronto](https://img.shields.io/badge/Vancouver,_BC_%E2%86%92_Toronto,_ON-C8102E?style=flat-square)
+![Vancouver to Toronto](https://img.shields.io/badge/Vancouver,_BC_%E2%86%92_Toronto,_ON-1A1916?style=flat-square)
 
-![Bodies](https://img.shields.io/badge/Sony-A7S_III_·_A1_II_·_A7R_V-FF6600?style=flat-square)
-![Zooms](https://img.shields.io/badge/GM-24--70_·_70--200_·_50--150-1a1a1a?style=flat-square)
-![Primes](https://img.shields.io/badge/GM-50mm_f%2F1.2-1a1a1a?style=flat-square)
-![Long](https://img.shields.io/badge/G-200--600mm-1a1a1a?style=flat-square)
-![Accessories](https://img.shields.io/badge/+_a_lot_of_other_accessories-6e6e6e?style=flat-square)
+![Bodies](https://img.shields.io/badge/Sony-A7S_III_·_A1_II_·_A7R_V-1A1916?style=flat-square)
+![Zooms](https://img.shields.io/badge/GM-24--70_·_70--200_·_50--150-1A1916?style=flat-square)
+![Primes](https://img.shields.io/badge/GM-50mm_f%2F1.2-1A1916?style=flat-square)
+![Long](https://img.shields.io/badge/G-200--600mm-1A1916?style=flat-square)
+![Accessories](https://img.shields.io/badge/+_a_lot_of_other_accessories-66625A?style=flat-square)
 
-![BMW](https://img.shields.io/badge/BMW-2×_E93_N54_·_G12_N63-0166B1?style=flat-square)
-![Printers](https://img.shields.io/badge/Printers-Bambu_Lab_H2D_·_Ender_3_Pro-00AE42?style=flat-square)
+![BMW](https://img.shields.io/badge/BMW-2×_E93_N54_·_G12_N63-1A1916?style=flat-square)
+![Printers](https://img.shields.io/badge/Printers-Bambu_Lab_H2D_·_Ender_3_Pro-1A1916?style=flat-square)
 
 [Rotate my 3D printed business card](./card.stl) in GitHub's 3D viewer
 
