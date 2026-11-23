@@ -19,7 +19,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-# Same palettes as scripts/hero.py.
+# thebenzhou.com's paper and ink, shared by every card. The site has no dark theme, so dark swaps paper and ink.
 LIGHT = dict(bg="#F2F0EA", ink="#1A1916", ink2="#45423C", ink3="#66625A", line="#CFCABF")
 DARK = dict(bg="#1A1916", ink="#F2F0EA", ink2="#CFCABF", ink3="#A29D92", line="#3A3833")
 W, H = 960, 260
@@ -98,17 +98,25 @@ def font_css():
             "text{font-family:'Martian Mono',ui-monospace,Menlo,monospace;text-rendering:geometricPrecision}")
 
 
-# The board is a header plus one image per site, so each tile can link to its own site: GitHub gives an
-# image one link at most. Three tiles fill the card width, 8 px apart, so the grid lines up with the cards above.
-GAP = 8
+# The board is a header plus one image per site, so each tile can link to its own site: GitHub gives an image
+# one link at most. Every piece draws the whole board's outline shifted to its own place, and the image edge
+# crops it, so the ten images join into one card with no borders between sites.
+TILE_W, TILE_H, HEAD_H = W // 3, 72, 124
+
+
+def board(x, y, c):
+    rows = -(-len(SITES) // 3)
+    return (f'<rect x="{x + 0.5}" y="{y + 0.5}" width="{W - 1}" height="{HEAD_H + rows * TILE_H - 1}" rx="6" '
+            f'fill="{c['bg']}" stroke="{c['line']}"/>')
 def render_live_head(results, now, c):
     up = sum(t is not None for _, _, t in results)
-    w, h = W, 132
+    w, h = W, HEAD_H
     return "\n".join([
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img">',
         f"<title>{up} of {len(results)} live projects answered on {now:%b} {now.day}, {now.year}</title>",
         f"<style>{font_css()}</style>",
-        f'<rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="6" fill="{c['bg']}" stroke="{c['line']}"/>',
+        board(0, 0, c),
+        f'<line x1="40" y1="{h - 0.5}" x2="{w - 40}" y2="{h - 0.5}" stroke="{c['line']}"/>',
         f'<text x="40" y="48" font-size="15" letter-spacing="1" fill="{c['ink3']}">LIVE RIGHT NOW</text>',
         f'<text x="{w - 40}" y="48" font-size="15" text-anchor="end" fill="{c['ink3']}">checked {now:%b} {now.day}, {now:%H:%M} UTC</text>',
         f'<text x="38" y="104" font-size="36" letter-spacing="-2" fill="{c['ink']}">{up}/{len(results)}</text>',
@@ -120,9 +128,7 @@ def render_live_head(results, now, c):
 def render_tile(i, name, url, t, c):
     """One site: a dot that pulses while the site is up, its name, address and response time. A faster site
     pulses faster, so the board never beats in unison."""
-    w, h = W // 3, 80
-    card = (W - 2 * GAP) / 3
-    x = i % 3 * (card + GAP) - i % 3 * w  # where this column's card starts inside its own image
+    w, h = TILE_W, TILE_H
     up = t is not None
     period = 1.8 + 1.2 * math.log10(1 + 10 * t) if up else 0
     host = urllib.parse.urlparse(url).netloc.removeprefix("www.")
@@ -134,16 +140,16 @@ def render_tile(i, name, url, t, c):
         f"animation:p {period:.2f}s cubic-bezier(0.23,1,0.32,1) {0.4 + i * 0.15:.2f}s infinite}}"
         "@keyframes p{0%{transform:scale(1);opacity:.6}45%,100%{transform:scale(2.6);opacity:0}}"
         "@media (prefers-reduced-motion:reduce){.p{display:none}}</style>",
-        f'<rect x="{x + 0.5:.2f}" y=".5" width="{card - 1:.2f}" height="{h - 1}" rx="6" fill="{c['bg']}" stroke="{c['line']}"/>',
-        f'<g transform="translate({x:.2f} 0)">',
-        f'<circle cx="26" cy="34" r="5" fill="{c['ink'] if up else c['bg']}" stroke="{c['ink']}" stroke-width="1.5"/>',
+        board(-(i % 3) * w, -HEAD_H - (i // 3) * h, c),
+        f'<g transform="translate({8 if i % 3 == 0 else 0} 0)">',  # the first column lines up with the header text
+        f'<circle cx="34" cy="30" r="5" fill="{c['ink'] if up else c['bg']}" stroke="{c['ink'] if up else c['ink3']}" stroke-width="1.5"/>',
     ]
     if up:  # centred on the group's origin, so scale() grows the ring from the dot in every browser
-        out.append('<g transform="translate(26 34)"><circle class="p" r="5"/></g>')
+        out.append('<g transform="translate(34 30)"><circle class="p" r="5"/></g>')
     out += [
-        f'<text x="42" y="39" font-size="16" fill="{c['ink'] if up else c['ink3']}">{name}</text>',
-        f'<text x="{card - 22:.2f}" y="39" font-size="13" text-anchor="end" fill="{c['ink3']}">{"%.1fs" % t if up else "down"}</text>',
-        f'<text x="42" y="61" font-size="11" fill="{c['ink3']}">{host}</text>',
+        f'<text x="50" y="35" font-size="16" fill="{c['ink'] if up else c['ink3']}">{name}</text>',
+        f'<text x="{w - 34}" y="35" font-size="13" text-anchor="end" fill="{c['ink3']}">{"%.1fs" % t if up else "down"}</text>',
+        f'<text x="50" y="55" font-size="11" fill="{c['ink3']}">{host}</text>',
         "</g></svg>",
     ]
     return "\n".join(out) + "\n"

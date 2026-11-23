@@ -1,5 +1,5 @@
-"""Draws hero.svg and hero-dark.svg: an ASCII portrait that types itself in, then keeps an inverse
-scan band sweeping down it, next to the name and headline numbers. The README picks one with
+"""Draws hero.svg and hero-dark.svg: an ASCII portrait, each character in the photo's own colour, that types
+itself in, then keeps an inverse scan band sweeping down it, next to the name and headline numbers. The README picks one with
 <picture> to match the viewer's GitHub theme.
 
 Run by hand when the photo or the numbers change. The daily Action does not touch this file.
@@ -11,9 +11,11 @@ Switzer comes from fontshare.com. Its license does not allow committing the font
 out of the repo and the SVG carries only the glyphs it uses.
 """
 import base64
+import colorsys
 import html
 import io
 import sys
+import xml.dom.minidom
 from pathlib import Path
 
 import numpy as np
@@ -22,10 +24,9 @@ from fontTools.ttLib import TTFont
 from PIL import Image, ImageOps
 from rembg import remove
 
+from stats import DARK, LIGHT  # thebenzhou.com's paper and ink
+
 ROOT = Path(__file__).resolve().parent.parent
-# thebenzhou.com's paper and ink. The site has no dark theme, so dark swaps paper and ink.
-LIGHT = dict(bg="#F2F0EA", ink="#1A1916", ink2="#45423C", ink3="#66625A", line="#CFCABF")
-DARK = dict(bg="#1A1916", ink="#F2F0EA", ink2="#CFCABF", ink3="#A29D92", line="#3A3833")
 
 W, H = 960, 420
 CROP = (70, 95, 830, 855)  # head and shoulders in the 900x1200 RCVC team portrait
@@ -61,9 +62,11 @@ def font_face(family, ttf_path, text, weight=400):
 
 
 def tone_grid(photo, cols, cell_ratio):
-    """Photo to a cols-wide grid of (tone, subject coverage), both 0..1. cell_ratio is cell height over width."""
+    """Photo to a cols-wide grid of tone and subject coverage (0..1) and the subject's mean colour (RGB 0..1).
+    cell_ratio is cell height over width."""
     cut = remove(Image.open(photo).convert("RGB")).crop(CROP)
     a = np.asarray(cut.getchannel("A")) > 128
+    rgb_px = np.asarray(cut.convert("RGB"), dtype=np.float32) / 255
     g = np.asarray(ImageOps.grayscale(cut.convert("RGB")), dtype=np.float32)
     # stretch tones over the subject only, so skin lands light and hair stays dark
     lo, hi = np.percentile(g[a], [3, 97])
@@ -71,7 +74,7 @@ def tone_grid(photo, cols, cell_ratio):
     g[~a] = 1.0
     rows = round(cols * g.shape[0] / g.shape[1] / cell_ratio)
     bh, bw = g.shape[0] / rows, g.shape[1] / cols
-    tone, cover = np.ones((rows, cols)), np.zeros((rows, cols))
+    tone, cover, rgb = np.ones((rows, cols)), np.zeros((rows, cols)), np.zeros((rows, cols, 3))
     for i in range(rows):
         for j in range(cols):
             ys, xs = slice(int(i * bh), int((i + 1) * bh)), slice(int(j * bw), int((j + 1) * bw))
@@ -79,7 +82,30 @@ def tone_grid(photo, cols, cell_ratio):
             # mostly the block's darker pixels, so thin features (eyes, brows, mouth) survive the shrink
             tone[i, j] = 0.15 * blk.mean() + 0.85 * np.percentile(blk, 10)
             cover[i, j] = a[ys, xs].mean()
-    return tone, cover
+            if a[ys, xs].any():
+                rgb[i, j] = rgb_px[ys, xs][a[ys, xs]].mean(0)
+    return tone, cover, rgb
+
+
+def shade(c, dark):
+    """A cell's photo colour, saturated enough to read at glyph size and kept clear of the card's background."""
+    h, l, s = colorsys.rgb_to_hls(*c)
+    l = max(l, 0.55) if dark else min(l, 0.42)
+    r, g, b = colorsys.hls_to_rgb(h, l, min(1, s * 1.5))
+    return "#%02X%02X%02X" % tuple(round(v * 15) * 17 for v in (r, g, b))  # 16 levels, so neighbours share runs
+
+
+def coloured(row, colours):
+    """One row as <tspan> runs of equal colour; spaces join whichever run they sit in."""
+    runs, cur, buf = [], None, ""
+    for ch, col in zip(row, colours):
+        col = col if ch != " " else cur
+        if col != cur and buf:
+            runs.append((cur, buf))
+            buf = ""
+        cur, buf = col, buf + ch
+    runs.append((cur, buf))
+    return "".join(f'<tspan fill="{c}">{html.escape(t)}</tspan>' if c else html.escape(t) for c, t in runs)
 
 
 def ascii_rows(tone, cover, dark):
@@ -100,7 +126,7 @@ CELL_H = CELL_W * 1.875
 FS = CELL_W / 0.65  # Martian Mono at 87.5% width advances 0.65em
 
 
-def render(rows, c, fonts):
+def render(rows, colours, c, fonts):
     cell_w, cell_h, fs = CELL_W, CELL_H, FS
     ph = len(rows) * cell_h
     py = PY + (H - 2 * PY - ph) / 2
@@ -132,7 +158,7 @@ def render(rows, c, fonts):
     ]
     for i, row in enumerate(rows):
         y = py + (i + 0.8) * cell_h
-        out.append(f'<text class="a" x="{PX}" y="{y:.2f}" textLength="{PW}" lengthAdjust="spacing">{html.escape(row)}</text>')
+        out.append(f'<text class="a" x="{PX}" y="{y:.2f}" textLength="{PW}" lengthAdjust="spacing">{coloured(row, colours[i])}</text>')
     # one cover per row slides right to reveal it, with a block cursor riding its left edge.
     # No clipPath: Safari ignores it on animated children, so the cursor hides itself instead.
     for i in range(len(rows)):
@@ -181,10 +207,13 @@ def main(photo, sw400, sw600):
         font_face("Switzer", sw400, sans_text, 400),
         font_face("Switzer", sw600, sans_text, 600),
     ])
-    tone, cover = tone_grid(photo, COLS, CELL_H / CELL_W)
+    tone, cover, rgb = tone_grid(photo, COLS, CELL_H / CELL_W)
     for name, palette, dark in [("hero.svg", LIGHT, False), ("hero-dark.svg", DARK, True)]:
         rows = ascii_rows(tone, cover, dark)
-        (ROOT / name).write_text(render(rows, palette, fonts))
+        colours = [[shade(px, dark) for px in line] for line in rgb]
+        svg = render(rows, colours, palette, fonts)
+        xml.dom.minidom.parseString(svg)  # browsers drop an SVG <img> that is not well-formed XML, with no error
+        (ROOT / name).write_text(svg)
         print(f"{name}: {len(rows)} rows x {COLS} cols, {(ROOT / name).stat().st_size // 1024} KB")
 
 
