@@ -1,5 +1,6 @@
 """Draws stats.svg and stats-dark.svg: commits to public repositories over the last 12 months, by month.
-Also draws live.svg and live-dark.svg: whether each live project answered a request just now.
+Also draws live.svg and live-dark.svg: whether each live project answered a request just now, with a ring
+pulsing out of each one that did.
 
 The daily Action runs this with its own GITHUB_TOKEN, which cannot see private repositories, so
 every number here is one anyone can check. Standard library only.
@@ -94,7 +95,12 @@ def render_live(results, now, c):
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {h}" width="{W}" height="{h}" role="img">',
         f"<title>{up} of {len(results)} live projects answered on {now:%b} {now.day}, {now.year}</title>",
         f"<style>@font-face{{font-family:'Martian Mono';src:url(data:font/woff2;base64,{mono}) format('woff2')}}"
-        "text{font-family:'Martian Mono',ui-monospace,Menlo,monospace;text-rendering:geometricPrecision}</style>",
+        "text{font-family:'Martian Mono',ui-monospace,Menlo,monospace;text-rendering:geometricPrecision}"
+        # a ring leaves each site that answered, one after another in reading order, every 4 s
+        f".p{{fill:none;stroke:{c['ink']};stroke-width:1.5;vector-effect:non-scaling-stroke;opacity:0;"
+        "animation:p 4s cubic-bezier(0.23,1,0.32,1) var(--d) infinite}"
+        "@keyframes p{0%{transform:scale(1);opacity:.6}30%,100%{transform:scale(2.6);opacity:0}}"
+        "@media (prefers-reduced-motion:reduce){.p{display:none}}</style>",
         f'<rect x=".5" y=".5" width="{W - 1}" height="{h - 1}" rx="6" fill="{c['bg']}" stroke="{c['line']}"/>',
         f'<text x="40" y="50" font-size="15" letter-spacing="1" fill="{c['ink3']}">LIVE RIGHT NOW</text>',
         f'<text x="{x1}" y="50" font-size="15" text-anchor="end" fill="{c['ink3']}">checked {now:%b} {now.day}, {now:%H:%M} UTC</text>',
@@ -105,6 +111,8 @@ def render_live(results, now, c):
         x, y = x0 + (i % 3) * col_w, top + (i // 3) * row
         dot = c["ink"] if t is not None else c["bg"]
         out.append(f'<circle cx="{x + 5}" cy="{y - 5}" r="5" fill="{dot}" stroke="{c['ink']}" stroke-width="1.5"/>')
+        if t is not None:  # centred on the group's origin, so scale() grows the ring from the dot in every browser
+            out.append(f'<g transform="translate({x + 5} {y - 5})"><circle class="p" r="5" style="--d:{0.6 + i * 0.12:.2f}s"/></g>')
         out.append(f'<text x="{x + 20}" y="{y}" font-size="15" fill="{c['ink'] if t is not None else c['ink3']}">{name}</text>')
         note = f"{t:.1f}s" if t is not None else "down"
         out.append(f'<text x="{x + col_w - 28}" y="{y}" font-size="13" text-anchor="end" fill="{c['ink3']}">{note}</text>')

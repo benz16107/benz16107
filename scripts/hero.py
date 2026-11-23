@@ -1,5 +1,6 @@
-"""Draws hero.svg and hero-dark.svg: an ASCII portrait that types itself in, next to the name and
-headline numbers. The README picks one with <picture> to match the viewer's GitHub theme.
+"""Draws hero.svg and hero-dark.svg: an ASCII portrait that types itself in, then keeps an inverse
+scan band sweeping down it, next to the name and headline numbers. The README picks one with
+<picture> to match the viewer's GitHub theme.
 
 Run by hand when the photo or the numbers change. The daily Action does not touch this file.
 
@@ -32,6 +33,9 @@ GAMMA = 1.3  # above 1 darkens midtones, so sunlit skin keeps its shading instea
 COLS = 100
 PX, PY, PW = 20, 20, 380  # portrait box
 RAMP = " .:-=+*#%@"  # sparse to dense
+SCAN_EVERY = 6.0  # seconds between sweeps
+SCAN_ROW = 0.035  # seconds the band takes to move down one row
+SCAN_ROWS = 3  # band height
 
 LABEL = "CS · UNIVERSITY OF TORONTO"
 NAME = "Ben Zhou"
@@ -118,7 +122,10 @@ def render(rows, c, fonts):
         ".u{animation:u .18s var(--d) both}",
         f"@keyframes k{{to{{transform:translateX({PW + cell_w * 3:.2f}px)}}}}",
         "@keyframes u{0%,100%{opacity:0}1%,99%{opacity:1}}",
-        "@media (prefers-reduced-motion:reduce){.c{display:none}}",
+        # each row shows its inverse once per sweep, for as long as the band covers it
+        f".b{{opacity:0;animation:b {SCAN_EVERY}s linear var(--d) infinite}}",
+        f"@keyframes b{{0%,{100 * SCAN_ROW * SCAN_ROWS / SCAN_EVERY:.3f}%{{opacity:1}}{100 * SCAN_ROW * SCAN_ROWS / SCAN_EVERY + 0.01:.3f}%,100%{{opacity:0}}}}",
+        "@media (prefers-reduced-motion:reduce){.c,.b{display:none}}",
         "</style>",
         f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="6" fill="{c['bg']}" stroke="{c['line']}"/>',
         '<g class="m">',
@@ -134,6 +141,19 @@ def render(rows, c, fonts):
             f'<g class="c" style="--d:{0.25 + i * 0.05:.3f}s">'
             f'<rect x="{PX}" y="{top:.2f}" width="{PW}" height="{cell_h + 0.6:.2f}" fill="{c['bg']}"/>'
             f'<rect class="u" x="{PX - cell_w * 1.5:.2f}" y="{top + 0.6:.2f}" width="{cell_w * 1.5:.2f}" height="{cell_h - 0.6:.2f}" fill="{c['ink']}"/></g>'
+        )
+    # the scan starts once the last row has typed in
+    scan_start = 0.25 + len(rows) * 0.05 + 0.8
+    for i, row in enumerate(rows):
+        if not row.strip():
+            continue
+        top, y = py + i * cell_h, py + (i + 0.8) * cell_h
+        # inverse video over the subject only, so the band takes the shape of the silhouette as it moves
+        a, b = len(row) - len(row.lstrip()), len(row.rstrip())
+        out.append(
+            f'<g class="b" style="--d:{scan_start + i * SCAN_ROW:.3f}s">'
+            f'<rect x="{PX + a * cell_w:.2f}" y="{top:.2f}" width="{(b - a) * cell_w:.2f}" height="{cell_h:.2f}" fill="{c['ink']}"/>'
+            f'<text class="a" x="{PX}" y="{y:.2f}" textLength="{PW}" lengthAdjust="spacing" style="fill:{c['bg']}">{html.escape(row)}</text></g>'
         )
     out.append("</g>")
 
