@@ -108,4 +108,6 @@
 ![BMW](https://img.shields.io/badge/BMW-2×_E93_N54_·_G12_N63-0166B1?style=flat-square)
 ![Printers](https://img.shields.io/badge/Printers-Bambu_Lab_H2D_·_Ender_3_Pro-00AE42?style=flat-square)
 
+[Rotate my 3D printed business card](./card.stl) in GitHub's 3D viewer
+
 </div>
