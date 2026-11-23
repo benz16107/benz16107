@@ -1,4 +1,4 @@
-<!-- hero*.svg comes from scripts/hero.py and wins*.svg from scripts/wins.py, both run by hand. stats*.svg and
+<!-- hero*.svg comes from scripts/hero.py, run by hand. stats*.svg and
      live/ are redrawn daily by .github/workflows/stats.yml, from public commits and a request to each live
      site; each tile in live/ links to its site, so keep the tiles in step with SITES in scripts/stats.py.
      <picture> follows the viewer's GitHub theme. -->
@@ -18,25 +18,6 @@
 </div>
 
 ---
-
-<details>
-<summary><b>15 hackathon wins</b>, click for the 12 prizes with a public write-up</summary>
-<br>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="./wins-dark.svg" /><img src="./wins.svg" width="100%" alt="Hackathon prizes with a public write-up in 2026, stacked by month" /></picture>
-
-| When | Hackathon | Project | Prize |
-|---|---|---|---|
-| Nov 2026 | HackUTD 2026 | [Tessera](https://devpost.com/software/bean-4970h3) | Spacetime track, 2nd place |
-| Oct 2026 | Cal Hacks 13.0 | [GurtOS](https://devpost.com/software/gurtos) | Atlassian prize<br>Fetch.ai special recognition prize<br>MLH Best Use of Solana |
-| Sep 2026 | Hack the North 2026 | [Pixie](https://devpost.com/software/pixie-8vlj7g) | Intact track<br>Federato track |
-| Jul 2026 | cuHacking7 | [tradex](https://devpost.com/software/tradex-0efat7) | MLH Best Use of Solana |
-| Mar 2026 | McGill AeroHacks | [OOPS](https://devpost.com/software/skygrid) | Best Use of MongoDB Atlas |
-| Mar 2026 | GenAI Genesis | [Eco-Pulse](https://devpost.com/software/eco-pulse-fpbo15) | Top 2 teams, online |
-| Mar 2026 | Hack Days in the 6ix | [Packwise](https://devpost.com/software/packwise-jmgtqi) | Runner up |
-| Feb 2026 | Mac-a-thon | [BlindSpot](https://devpost.com/software/blindspot-zs7dwq) | MLH Best Use of ElevenLabs<br>Best Use of Backboard.io (GitCloud) |
-
-</details>
 
 <br>
 
