@@ -99,7 +99,8 @@ def font_css():
 
 
 # The board is a header plus one image per site, so each tile can link to its own site: GitHub gives an
-# image one link at most. Every card is inset 4 px, so the gaps between tiles match at any width.
+# image one link at most. Three tiles fill the card width, 8 px apart, so the grid lines up with the cards above.
+GAP = 8
 def render_live_head(results, now, c):
     up = sum(t is not None for _, _, t in results)
     w, h = W, 132
@@ -107,7 +108,7 @@ def render_live_head(results, now, c):
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img">',
         f"<title>{up} of {len(results)} live projects answered on {now:%b} {now.day}, {now.year}</title>",
         f"<style>{font_css()}</style>",
-        f'<rect x="4.5" y="4.5" width="{w - 9}" height="{h - 9}" rx="6" fill="{c['bg']}" stroke="{c['line']}"/>',
+        f'<rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="6" fill="{c['bg']}" stroke="{c['line']}"/>',
         f'<text x="40" y="48" font-size="15" letter-spacing="1" fill="{c['ink3']}">LIVE RIGHT NOW</text>',
         f'<text x="{w - 40}" y="48" font-size="15" text-anchor="end" fill="{c['ink3']}">checked {now:%b} {now.day}, {now:%H:%M} UTC</text>',
         f'<text x="38" y="104" font-size="36" letter-spacing="-2" fill="{c['ink']}">{up}/{len(results)}</text>',
@@ -119,7 +120,9 @@ def render_live_head(results, now, c):
 def render_tile(i, name, url, t, c):
     """One site: a dot that pulses while the site is up, its name, address and response time. A faster site
     pulses faster, so the board never beats in unison."""
-    w, h = 320, 88
+    w, h = W // 3, 80
+    card = (W - 2 * GAP) / 3
+    x = i % 3 * (card + GAP) - i % 3 * w  # where this column's card starts inside its own image
     up = t is not None
     period = 1.8 + 1.2 * math.log10(1 + 10 * t) if up else 0
     host = urllib.parse.urlparse(url).netloc.removeprefix("www.")
@@ -131,16 +134,17 @@ def render_tile(i, name, url, t, c):
         f"animation:p {period:.2f}s cubic-bezier(0.23,1,0.32,1) {0.4 + i * 0.15:.2f}s infinite}}"
         "@keyframes p{0%{transform:scale(1);opacity:.6}45%,100%{transform:scale(2.6);opacity:0}}"
         "@media (prefers-reduced-motion:reduce){.p{display:none}}</style>",
-        f'<rect x="4.5" y="4.5" width="{w - 9}" height="{h - 9}" rx="6" fill="{c['bg']}" stroke="{c['line']}"/>',
-        f'<circle cx="30" cy="38" r="5" fill="{c['ink'] if up else c['bg']}" stroke="{c['ink']}" stroke-width="1.5"/>',
+        f'<rect x="{x + 0.5:.2f}" y=".5" width="{card - 1:.2f}" height="{h - 1}" rx="6" fill="{c['bg']}" stroke="{c['line']}"/>',
+        f'<g transform="translate({x:.2f} 0)">',
+        f'<circle cx="26" cy="34" r="5" fill="{c['ink'] if up else c['bg']}" stroke="{c['ink']}" stroke-width="1.5"/>',
     ]
     if up:  # centred on the group's origin, so scale() grows the ring from the dot in every browser
-        out.append('<g transform="translate(30 38)"><circle class="p" r="5"/></g>')
+        out.append('<g transform="translate(26 34)"><circle class="p" r="5"/></g>')
     out += [
-        f'<text x="46" y="43" font-size="16" fill="{c['ink'] if up else c['ink3']}">{name}</text>',
-        f'<text x="{w - 26}" y="43" font-size="13" text-anchor="end" fill="{c['ink3']}">{"%.1fs" % t if up else "down"}</text>',
-        f'<text x="46" y="66" font-size="12" fill="{c['ink3']}">{host}</text>',
-        "</svg>",
+        f'<text x="42" y="39" font-size="16" fill="{c['ink'] if up else c['ink3']}">{name}</text>',
+        f'<text x="{card - 22:.2f}" y="39" font-size="13" text-anchor="end" fill="{c['ink3']}">{"%.1fs" % t if up else "down"}</text>',
+        f'<text x="42" y="61" font-size="11" fill="{c['ink3']}">{host}</text>',
+        "</g></svg>",
     ]
     return "\n".join(out) + "\n"
 
